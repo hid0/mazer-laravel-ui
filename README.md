@@ -24,6 +24,9 @@
 
 Laravel UI Mazer is Laravel custom dashboard UI that will be helpful for many applications.
 
+- [Mazer Demo](https://zuramai.github.io/mazer/demo)
+- [Mazer Repo](https://github.com/zuramai/mazer)
+
 ## Requirements
 
 - Composer
