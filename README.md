@@ -1,5 +1,17 @@
 # mazer-laravel-ui
 
+<p align="center">
+    <a href="https://packagist.org/packages/hid0/mazer-laravel-ui">
+        <img src="https://img.shields.io/packagist/dt/hid0/mazer-laravel-ui" alt="Total Downloads">
+    </a>
+    <a href="https://packagist.org/packages/hid0/mazer-laravel-ui">
+        <img src="https://img.shields.io/packagist/v/hid0/mazer-laravel-ui" alt="Latest Stable Version">
+    </a>
+    <a href="https://packagist.org/packages/hid0/mazer-laravel-ui">
+        <img src="https://img.shields.io/packagist/l/hid0/mazer-laravel-ui" alt="License">
+    </a>
+</p>
+
 ## Table of contents
 
 - [Introduction](#introduction)
