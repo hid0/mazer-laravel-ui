@@ -14,14 +14,14 @@ class MazerServiceProvider extends ServiceProvider
    */
   public function boot()
   {
-    UiCommand::macro('stisla', function (UiCommand $command) {
-      StislaPreset::install($command);
+    UiCommand::macro('mazer', function (UiCommand $command) {
+      MazerPreset::install($command);
 
       $command->info('Installing package.');
-      exec('npm install && npm run production');
+      exec('npm install && npm run dev');
       $command->info('Package installed successfull.');
 
-      $command->info('Stisla UI scaffolding installed successfully.');
+      $command->info('Mazer UI scaffolding installed successfully.');
     });
   }
 }

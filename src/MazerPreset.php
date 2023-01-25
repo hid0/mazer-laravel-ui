@@ -8,7 +8,7 @@ use Laravel\Ui\UiCommand;
 
 class MazerPreset extends Preset
 {
-  const RESOURCE_PATH = __DIR__ . '/../resources/';
+  const RESOURCE_PATH = __DIR__ . '/../stubs/default/resources/';
 
   /**
    * Install the preset
@@ -29,7 +29,7 @@ class MazerPreset extends Preset
     static::updateStyles();
     $command->info('Updating Resource Layouts');
     static::updateLayoutViews();
-    $command->info('Updating Webpack Mix');
+    $command->info('Updating Vite');
     static::updateMix();
 
     static::removeNodeModules();
@@ -46,44 +46,44 @@ class MazerPreset extends Preset
   {
     return [
       "@ckeditor/ckeditor5-build-classic" => "^32.0.0",
-      "@fontsource/nunito" => "^4.5.4",
+      "@fontsource/nunito" => "^4.5.11",
       "@fortawesome/fontawesome-free" => "^5.15.4",
       "@icon/dripicons" => "^2.0.0-alpha.3",
-      "@popperjs/core" => "^2.11.4",
-      "apexcharts" => "^3.33.2",
-      "bootstrap" => "5.1.3",
-      "bootstrap-icons" => "^1.8.1",
-      "chart.js" => "^2.9.4",
-      "choices.js" => "^9.1.0",
+      "@popperjs/core" => "^2.11.6",
+      "apexcharts" => "^3.36.3",
+      "bootstrap" => "5.2.3",
+      "bootstrap-icons" => "^1.10.2",
+      "chart.js" => "^4.1.1",
+      "choices.js" => "^10.2.0",
       "cross-env" => "^7.0.3",
-      "datatables.net" => "^1.11.5",
-      "datatables.net-bs5" => "^1.11.5",
-      "dayjs" => "^1.11.0",
+      "datatables.net" => "^1.13.1",
+      "datatables.net-bs5" => "^1.13.1",
+      "dayjs" => "^1.11.7",
       "dragula" => "^3.7.3",
-      "feather-icons" => "^4.28.0",
-      "filepond" => "^4.30.3",
-      "filepond-plugin-file-validate-size" => "^2.2.5",
-      "filepond-plugin-file-validate-type" => "^1.2.6",
+      "feather-icons" => "^4.29.0",
+      "filepond" => "^4.30.4",
+      "filepond-plugin-file-validate-size" => "^2.2.8",
+      "filepond-plugin-file-validate-type" => "^1.2.8",
       "filepond-plugin-image-crop" => "^2.0.6",
       "filepond-plugin-image-exif-orientation" => "^1.0.11",
       "filepond-plugin-image-filter" => "^1.0.1",
-      "filepond-plugin-image-preview" => "^4.6.10",
+      "filepond-plugin-image-preview" => "^4.6.11",
       "filepond-plugin-image-resize" => "^2.0.10",
-      "jquery" => "^3.6.0",
-      "laravel-mix" => "^6.0.43",
+      "jsvectormap" => "^1.5.1",
+      "laravel-mix" => "^6.0.49",
       "nunjucks" => "^3.2.3",
       "parsleyjs" => "^2.9.2",
       "perfect-scrollbar" => "^1.5.5",
-      "popper.js" => "^1.16.1",
       "quill" => "^1.3.7",
       "rater-js" => "^1.0.1",
-      "rtlcss" => "^3.5.0",
-      "simple-datatables" => "3.0.2",
-      "summernote" => "0.8.18",
-      "sweetalert2" => "^11.4.6",
-      "tinymce" => "^5.10.3",
-      "toastify-js" => "^1.11.2",
-      "webpack" => "^5.70.0"
+      "rtlcss" => "^4.0.0",
+      "simple-datatables" => "^4.0.8",
+      "summernote" => "0.8.20",
+      "sweetalert2" => "^11.6.16",
+      "tinymce" => "^6.3.1",
+      "toastify-js" => "^1.12.0",
+      "vite" => "^4.0.4",
+      "laravel-vite-plugin" => "^0.7.3"
     ] + $packages;
   }
 
@@ -117,15 +117,15 @@ class MazerPreset extends Preset
   }
 
   /**
-   * Update the webpack.mix.js
+   * Update the vite.config.js
    *
    * @return void
    */
   protected static function updateMix()
   {
     copy(
-      __DIR__ . '/../stubs/webpack.mix.js',
-      base_path('webpack.mix.js')
+      __DIR__ . '/../stubs/default/vite.config.js',
+      base_path('vite.config.js')
     );
   }
 
